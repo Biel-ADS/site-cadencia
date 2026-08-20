@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexus — Sites, sistemas e suporte técnico em Conselheiro Lafaiete</title>
+<meta name="description" content="Nexus TI: sites e sistemas sob medida, bots e automações, redes e suporte técnico remoto ou no local. Conselheiro Lafaiete, MG.">
+<meta name="theme-color" content="#000000">
+
+<meta property="og:title" content="Nexus | Tecnologia sob medida">
+<meta property="og:description" content="Sites que vendem. Máquinas que não param. Desenvolvimento, automação e suporte técnico presencial.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexusti.dev.br/">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000000'/%3E%3Cpath d='M8 24V8l16 16V8' stroke='%23FF5A2B' stroke-width='3' fill='none' stroke-linecap='square'/%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+
+<!-- tema e modo de movimento aplicados antes da pintura, para não piscar -->
+<script>(function(){
+  var r=document.documentElement,s=null,m=null;
+  try{ s=localStorage.getItem('nexus-theme'); m=localStorage.getItem('nexus-motion'); }catch(e){}
+  if(s==='light') r.setAttribute('data-theme','light');
+  if(!m){
+    var weak=(navigator.hardwareConcurrency&&navigator.hardwareConcurrency<=4)||(navigator.deviceMemory&&navigator.deviceMemory<=4),
+        red=matchMedia('(prefers-reduced-motion:reduce)').matches;
+    m=(weak||red)?'lofi':'hifi';       /* o teste de GPU roda no app.js e pode rebaixar depois */
+  }
+  if(m==='lofi') r.classList.add('lo-fi');
+})();</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Nexus Soluções em Tecnologia","description":"Criação de sites e sistemas, bots e automações, redes e suporte técnico remoto e no local.","address":{"@type":"PostalAddress","addressLocality":"Conselheiro Lafaiete","addressRegion":"MG","addressCountry":"BR"},"telephone":"+5531982312500","url":"https://nexusti.dev.br/"}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="head">
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="head-in">
+    <a class="brand" href="#top" aria-label="Nexus, início">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 25V7l20 18V7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>
+      <span class="brand-word">Nexus</span>
+      <span class="brand-tag">TI &amp; Dev</span>
+    </a>
+
+    <nav class="nav" aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#infra">Suporte</a>
+      <a href="#processo">Processo</a>
+      <a href="#trabalhos">Trabalhos</a>
+    </nav>
+
+    <div class="head-cta">
+      <span class="live"><i></i>Respondendo agora</span>
+
+      <div class="motion" role="group" aria-label="Qualidade visual">
+        <span class="mt-slider" aria-hidden="true"></span>
+        <button class="mt-opt" type="button" data-motion="hifi" aria-pressed="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Hi-Fi
+        </button>
+        <button class="mt-opt" type="button" data-motion="lofi" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10Z"/></svg>Lo-Fi
+        </button>
+      </div>
+
+      <button class="theme" id="theme" type="button" role="switch" aria-checked="false" aria-label="Alternar para o tema claro">
+        <span class="knob" aria-hidden="true">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.5 1.5M17.6 17.6l1.5 1.5M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5"/></svg>
+        </span>
+      </button>
+      <a class="btn btn-solid" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="menu-mob" aria-label="Abrir menu"><span></span><span></span></button>
+  </div>
+  <div class="menu-mob" id="menu-mob" hidden>
+    <a href="#servicos">Serviços</a>
+    <a href="#infra">Suporte</a>
+    <a href="#processo">Processo</a>
+    <a href="#trabalhos">Trabalhos</a>
+    <a class="mm-cta" href="https://wa.me/5531982312500" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    <button class="mm-theme" id="theme-mob" type="button">Tema: <b>escuro</b></button>
+
+    <div class="motion" role="group" aria-label="Qualidade visual">
+      <span class="mt-slider" aria-hidden="true"></span>
+      <button class="mt-opt" type="button" data-motion="hifi" aria-pressed="true">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg>Hi-Fi
+      </button>
+      <button class="mt-opt" type="button" data-motion="lofi" aria-pressed="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3c-4 4-6 7-6 10a6 6 0 0 0 12 0c0-3-2-6-6-10Z"/></svg>Lo-Fi
+      </button>
+    </div>
+    <p class="motion-note" id="motionNote"></p>
+  </div>
+</header>
+
+<main id="conteudo">
+
+<!-- ————————————————— HERO ————————————————— -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="eb-dot"></span>Conselheiro Lafaiete · MG<span class="eb-more"> — remoto e presencial</span></p>
+      <h1><span class="ln"><span>Sites que vendem.</span></span><span class="ln"><span>Máquinas que <em>não param.</em></span></span></h1>
+      <p class="lede">Uma equipe só para os dois lados da sua tecnologia: a parte que atrai cliente — site, sistema, automação — e a parte que segura a operação de pé — rede, backup, manutenção.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-solid btn-lg" href="#contato">Começar um projeto</a>
+        <a class="btn btn-ghost btn-lg" href="#trabalhos">Ver trabalhos entregues</a>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Atendimento</dt><dd>WhatsApp direto, sem chamado</dd></div>
+        <div><dt>Entrega</dt><dd>Hospedagem e domínio inclusos</dd></div>
+        <div><dt>Depois do site</dt><dd>Manutenção contínua</dd></div>
+      </dl>
+    </div>
+
+    <!-- Assinatura: esquema de operação -->
+    <figure class="scheme" aria-labelledby="scheme-cap">
+      <div class="scheme-head">
+        <span class="mono">esquema-operacao.svg</span>
+        <span class="mono dim">rev. 04</span>
+      </div>
+
+      <div class="scheme-body">
+        <svg id="diagram" viewBox="0 0 480 420" role="img" aria-label="Diagrama: site, bot, rede e suporte conectados ao núcleo Nexus">
+          <g class="wires" fill="none" stroke-width="1.4" opacity=".6">
+            <path id="w1" d="M170 212 H110 Q99 212 99 201 V88"/>
+            <path id="w2" d="M310 212 H370 Q381 212 381 201 V88"/>
+            <path id="w3" d="M170 212 H110 Q99 212 99 223 V332"/>
+            <path id="w4" d="M310 212 H370 Q381 212 381 223 V332"/>
+          </g>
+
+          <g class="pulses">
+            <circle r="3.5" fill="var(--signal)"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#w1"/></animateMotion></circle>
+            <circle r="3.5" fill="var(--signal)"><animateMotion dur="2.6s" repeatCount="indefinite" begin="0.65s"><mpath href="#w2"/></animateMotion></circle>
+            <circle r="3.5" fill="var(--signal)"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.3s"><mpath href="#w3"/></animateMotion></circle>
+            <circle r="3.5" fill="var(--signal)"><animateMotion dur="2.6s" repeatCount="indefinite" begin="1.95s"><mpath href="#w4"/></animateMotion></circle>
+          </g>
+
+          <g class="node" transform="translate(24,40)">
+            <rect width="150" height="48" rx="3"/>
+            <text class="n-key" x="12" y="20">WEB</text>
+            <text class="n-val" x="12" y="37">Site &amp; loja</text>
+          </g>
+          <g class="node" transform="translate(306,40)">
+            <rect width="150" height="48" rx="3"/>
+            <text class="n-key" x="12" y="20">BOT</text>
+            <text class="n-val" x="12" y="37">Automação</text>
+          </g>
+          <g class="node" transform="translate(24,332)">
+            <rect width="150" height="48" rx="3"/>
+            <text class="n-key" x="12" y="20">REDE</text>
+            <text class="n-val" x="12" y="37">Wi-Fi &amp; servidor</text>
+          </g>
+          <g class="node" transform="translate(306,332)">
+            <rect width="150" height="48" rx="3"/>
+            <text class="n-key" x="12" y="20">CAMPO</text>
+            <text class="n-val" x="12" y="37">Visita técnica</text>
+          </g>
+
+          <g class="core" transform="translate(170,186)">
+            <rect width="140" height="52" rx="3"/>
+            <text class="c-word" x="70" y="26">NEXUS</text>
+            <text class="c-sub" x="70" y="41">núcleo de operação</text>
+          </g>
+        </svg>
+      </div>
+
+      <figcaption id="scheme-cap" class="scheme-foot mono">
+        <span>4 frentes · 1 responsável</span>
+        <span class="dim">tudo passa pelo mesmo time</span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-run">
+      <span>Sites institucionais</span><b>·</b><span>Cardápio digital</span><b>·</b><span>ERP sob medida</span><b>·</b><span>Bots de Discord</span><b>·</b><span>Automação de WhatsApp</span><b>·</b><span>Integração de APIs</span><b>·</b><span>Formatação com backup</span><b>·</b><span>Redes e Wi-Fi</span><b>·</b><span>Manutenção preventiva</span><b>·</b>
+      <span>Sites institucionais</span><b>·</b><span>Cardápio digital</span><b>·</b><span>ERP sob medida</span><b>·</b><span>Bots de Discord</span><b>·</b><span>Automação de WhatsApp</span><b>·</b><span>Integração de APIs</span><b>·</b><span>Formatação com backup</span><b>·</b><span>Redes e Wi-Fi</span><b>·</b><span>Manutenção preventiva</span><b>·</b>
+    </div>
+  </div>
+</section>
+
+<!-- ————————————————— SERVIÇOS ————————————————— -->
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono sec-idx">01 — Desenvolvimento</p>
+      <h2>O que a gente constrói</h2>
+      <p class="sec-sub">Quatro fichas de serviço. Cada uma com escopo fechado, prazo combinado antes de começar e o código na sua mão no fim.</p>
+    </div>
+
+    <div class="sheets">
+      <article class="sheet sheet-wide reveal">
+        <header class="sheet-top">
+          <span class="mono ref">REF. WEB</span>
+          <span class="mono ref dim">entrega 7–15 dias</span>
+        </header>
+        <h3>Site profissional para a sua empresa</h3>
+        <p>Depender só do Instagram custa cliente. Um site próprio aparece na busca da sua região, mostra serviço e preço do seu jeito e joga a conversa direto no WhatsApp.</p>
+        <div class="sheet-art">
+          <div class="minisite">
+            <div class="ms-bar"><span class="ms-dot"></span><span class="ms-url mono">suaempresa.com.br</span></div>
+            <div class="ms-body">
+              <div class="ms-h"></div>
+              <div class="ms-l"></div><div class="ms-l short"></div>
+              <div class="ms-btn">Chamar no WhatsApp</div>
+              <div class="ms-cards"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <ul class="chips mono">
+            <li>Google &amp; SEO local</li><li>Carrega em 1s</li><li>Celular primeiro</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="sheet reveal">
+        <header class="sheet-top">
+          <span class="mono ref">REF. SIS</span>
+        </header>
+        <h3>Sistema sob medida</h3>
+        <p>Planilha que ninguém entende vira sistema. Controle de terminais, agenda em rede, orçamento automático — feito para o seu fluxo, não para o do concorrente.</p>
+        <div class="sheet-art art-rows">
+          <div class="row"><span>Terminal 04</span><b class="ok">em uso · 41min</b></div>
+          <div class="row"><span>Agenda quinta</span><b>7 serviços</b></div>
+          <div class="row"><span>Orçamento #218</span><b class="hot">aguardando</b></div>
+        </div>
+      </article>
+
+      <article class="sheet reveal">
+        <header class="sheet-top">
+          <span class="mono ref">REF. BOT</span>
+        </header>
+        <h3>Bots e automações</h3>
+        <p>O trabalho repetitivo sai da sua mão. Bot de Discord com economia e moderação, respostas automáticas no WhatsApp, integração entre sistemas que não se falam.</p>
+        <div class="sheet-art art-term">
+          <p class="mono"><span class="tp">›</span> nexus deploy --bot</p>
+          <p class="mono dim">conectando gateway…</p>
+          <p class="mono"><span class="ok">✓</span> online · 51 servidores · 14ms</p>
+        </div>
+      </article>
+
+      <article class="sheet sheet-wide reveal">
+        <header class="sheet-top">
+          <span class="mono ref">REF. ART</span>
+          <span class="mono ref dim">avulso ou mensal</span>
+        </header>
+        <h3>Identidade visual e artes</h3>
+        <p>Logo, cardápio, post, fachada, cartão. O mesmo cuidado do site aplicado em tudo que leva o nome da sua empresa — para o cliente reconhecer você de longe.</p>
+        <div class="sheet-art art-swatch">
+          <i style="--s:#F04E23"></i><i style="--s:#0E1410"></i><i style="--s:#E6E8E1"></i><i style="--s:#1F7A4D"></i>
+          <span class="mono dim">paleta · tipografia · aplicação</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ————————————————— INFRA (bloco invertido) ————————————————— -->
+<section class="sec invert" id="infra">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono sec-idx">02 — Suporte técnico</p>
+      <h2>Quando o problema é físico,<br>alguém aparece.</h2>
+      <p class="sec-sub">Software a gente resolve de onde estiver. Máquina travada, rede caindo e cabo solto pedem gente na sua sala — e é isso que a maioria das agências não faz.</p>
+    </div>
+
+    <div class="ops">
+      <article class="op reveal"><span class="mono op-n">01</span><h3>Suporte remoto e no local</h3><p>Acesso remoto na hora. Se não resolver pela tela, a visita é marcada no mesmo dia.</p></article>
+      <article class="op reveal"><span class="mono op-n">02</span><h3>Formatação com backup</h3><p>Sistema limpo e licenciado, com seus arquivos copiados e devolvidos no lugar.</p></article>
+      <article class="op reveal"><span class="mono op-n">03</span><h3>Instalação de programas</h3><p>Office, ferramentas do setor e o que a sua equipe usa todo dia, configurado.</p></article>
+      <article class="op reveal"><span class="mono op-n">04</span><h3>Limpeza e otimização</h3><p>Remoção de vírus, faxina de inicialização e ajustes que devolvem a velocidade.</p></article>
+      <article class="op reveal"><span class="mono op-n">05</span><h3>Manutenção preventiva</h3><p>Troca de pasta térmica, limpeza interna e checagem de disco antes de dar problema.</p></article>
+      <article class="op reveal"><span class="mono op-n">06</span><h3>Redes e Wi-Fi</h3><p>Cabeamento, roteador no lugar certo e sinal que chega até o fundo da loja.</p></article>
+    </div>
+
+    <div class="ops-cta reveal">
+      <p>Precisa de alguém hoje?</p>
+      <a class="btn btn-solid" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20preciso%20de%20suporte%20t%C3%A9cnico." target="_blank" rel="noopener">Chamar um técnico</a>
+    </div>
+  </div>
+</section>
+
+<!-- ————————————————— PROCESSO ————————————————— -->
+<section class="sec" id="processo">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono sec-idx">03 — Como funciona</p>
+      <h2>Três etapas, nenhuma surpresa</h2>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="mono st-n">Etapa 01</span>
+        <h3>Conversa e diagnóstico</h3>
+        <p>Você conta o problema, a gente pergunta o resto. Sai daqui com escopo, prazo e preço fechados por escrito — antes de qualquer pagamento.</p>
+      </li>
+      <li class="step reveal">
+        <span class="mono st-n">Etapa 02</span>
+        <h3>Execução com você junto</h3>
+        <p>Link de acompanhamento desde o primeiro dia. Você vê a tela real crescendo, pede ajuste e aprova cada bloco — nada de sumir por três semanas.</p>
+      </li>
+      <li class="step reveal">
+        <span class="mono st-n">Etapa 03</span>
+        <h3>Entrega e vida depois dela</h3>
+        <p>Publicação, domínio, hospedagem e treinamento de uso. Depois disso continuamos por perto para ajuste, atualização e o que quebrar.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ————————————————— TRABALHOS ————————————————— -->
+<section class="sec" id="trabalhos">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono sec-idx">04 — Trabalhos</p>
+      <h2>No ar, funcionando</h2>
+    </div>
+
+    <div class="works">
+      <article class="work reveal">
+        <div class="win">
+          <div class="win-bar">
+            <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="win-url">sistema interno · uso no balcão</span>
+          </div>
+          <div class="work-shot">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=900&q=80" alt="Tela de código do sistema da Cyber Copiadora" loading="lazy" width="900" height="600">
+          </div>
+        </div>
+        <div class="work-info">
+          <span class="mono ref">Sistema de gestão</span>
+          <h3>Cyber Copiadora</h3>
+          <p>Controle de tempo dos terminais, agenda sincronizada entre os computadores da loja e orçamento calculado na hora, no balcão.</p>
+        </div>
+      </article>
+
+      <article class="work reveal">
+        <div class="win">
+          <div class="win-bar">
+            <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="win-url">lapizza.shardweb.app</span>
+            <span class="win-tag">ao vivo</span>
+          </div>
+          <div class="frame" id="frame-lapizza">
+            <iframe src="https://lapizza.shardweb.app" title="Site La Pizza em funcionamento" loading="lazy" scrolling="no" tabindex="-1" aria-hidden="true"></iframe>
+            <div class="frame-fallback">
+              <span class="mono">pré-visualização indisponível<br>abra o site no botão abaixo</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-info">
+          <span class="mono ref">Site &amp; delivery</span>
+          <h3>La Pizza</h3>
+          <p>Cardápio digital com carrinho e pedido fechado direto no WhatsApp, pensado para quem escolhe a pizza com uma mão só.</p>
+          <a class="work-link" href="https://lapizza.shardweb.app" target="_blank" rel="noopener">Abrir o site →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="quotes">
+      <blockquote class="quote reveal">
+        <p>“Trabalho excelente. O site foi montado de forma super profissional e entregou exatamente aquilo que a gente esperava.”</p>
+        <footer><span class="q-av" style="background-image:url('https://lapizza.shardweb.app/assets/logo.png')"></span><span><b>Clebson</b><i>Proprietário · La Pizza</i></span></footer>
+      </blockquote>
+      <blockquote class="quote reveal">
+        <p>“Simplesmente o melhor. O atendimento foi muito rápido e a incorporação do sistema no nosso bot do Discord ficou perfeita.”</p>
+        <footer><span class="q-av q-av-alt">F</span><span><b>Proprietário</b><i>Falcon Store</i></span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ————————————————— CONTATO ————————————————— -->
+<section class="sec contato" id="contato">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="mono sec-idx">05 — Contato</p>
+      <h2>O que você quer resolver?</h2>
+      <p class="sec-sub">Escolha o assunto e a conversa já começa no lugar certo, sem formulário e sem espera.</p>
+    </div>
+
+    <div class="picks">
+      <a class="pick reveal" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20quero%20um%20site%20para%20a%20minha%20empresa." target="_blank" rel="noopener">
+        <span class="mono ref">WEB</span><h3>Quero um site</h3><p>Institucional, cardápio ou página de serviço.</p><span class="pick-go" aria-hidden="true">→</span>
+      </a>
+      <a class="pick reveal" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20quero%20um%20sistema%2FERP%20sob%20medida." target="_blank" rel="noopener">
+        <span class="mono ref">SIS</span><h3>Quero um sistema</h3><p>Gestão, ERP e controle interno sob medida.</p><span class="pick-go" aria-hidden="true">→</span>
+      </a>
+      <a class="pick reveal" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20quero%20um%20bot%20ou%20automa%C3%A7%C3%A3o." target="_blank" rel="noopener">
+        <span class="mono ref">BOT</span><h3>Quero automatizar</h3><p>Bots de Discord, WhatsApp e integrações.</p><span class="pick-go" aria-hidden="true">→</span>
+      </a>
+      <a class="pick reveal" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus%2C%20preciso%20de%20suporte%20t%C3%A9cnico." target="_blank" rel="noopener">
+        <span class="mono ref">SOS</span><h3>Está com problema</h3><p>Manutenção, rede, formatação e visita técnica.</p><span class="pick-go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <svg class="brand-mark big" viewBox="0 0 32 32" aria-hidden="true"><path d="M6 25V7l20 18V7" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square"/></svg>
+      <p>Nexus TI &amp; Desenvolvimento — tecnologia sob medida e suporte de gente de verdade, em Conselheiro Lafaiete e região.</p>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/nexus.lafaiete/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://discord.gg/zYHB3vXrZ3" target="_blank" rel="noopener" aria-label="Discord"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 6.5A13 13 0 0 1 12 6a13 13 0 0 1 3.5.5c2.4.7 4 2.4 4.6 4.6a15 15 0 0 1 0 5.6c-.6 2.2-2.2 3.9-4.6 4.6"/><path d="M15.5 21.3 14 19M8.5 21.3 10 19"/><path d="M8.5 6.5C6.1 7.2 4.5 8.9 3.9 11.1a15 15 0 0 0 0 5.6c.6 2.2 2.2 3.9 4.6 4.6"/><circle cx="9.5" cy="13" r="1"/><circle cx="14.5" cy="13" r="1"/></svg></a>
+      </div>
+    </div>
+
+    <nav class="foot-col" aria-label="Navegação do rodapé">
+      <h4 class="mono">Navegar</h4>
+      <a href="#servicos">Serviços</a><a href="#infra">Suporte técnico</a><a href="#processo">Processo</a><a href="#trabalhos">Trabalhos</a>
+    </nav>
+
+    <div class="foot-col">
+      <h4 class="mono">Falar com a gente</h4>
+      <a href="https://wa.me/5531982312500" target="_blank" rel="noopener">WhatsApp (31) 98231-2500</a>
+      <a href="https://www.instagram.com/nexus.lafaiete/" target="_blank" rel="noopener">@nexus.lafaiete</a>
+      <p class="foot-note">Seg a sáb · resposta no mesmo dia</p>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span class="mono">© 2026 Nexus TI &amp; Desenvolvimento</span>
+    <span class="mono dim">Conselheiro Lafaiete · MG</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5531982312500?text=Ol%C3%A1%20Nexus!" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.6 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5-4.5-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2 1.3 2.3 1.4.3.1.4.1.6-.1l.9-1c.2-.2.3-.2.6-.1l2 1c.3.1.4.2.5.3.1.2.1.8-.1 1.5Z"/></svg>
+</a>
+
+<script src="assets/app.js" defer></script>
+</body>
+</html>
