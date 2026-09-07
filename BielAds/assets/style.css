@@ -398,6 +398,28 @@ a{ color:inherit; }
 .chips{ display:flex; flex-wrap:wrap; gap:7px; list-style:none; padding:0; margin:14px 0 0; }
 .chips li{ border:1px solid var(--line-hard); border-radius:100px; padding:4px 10px; font-size:.62rem; color:var(--fg-soft); }
 
+/* sistemas em produção — grid extensível, basta acrescentar novos .prod-card */
+.prod-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }
+.prod-card{
+  display:flex; flex-direction:column;
+  background:var(--surface); border:1.5px solid var(--edge); border-radius:var(--r);
+  overflow:hidden; transition:transform .22s, box-shadow .22s, border-color .22s;
+}
+.prod-card:hover{ transform:translate(-2px,-2px); box-shadow:6px 6px 0 var(--shadow-card); border-color:var(--signal); }
+.prod-shot{ position:relative; margin:0; border-bottom:1.5px solid var(--edge); background:var(--bg); }
+.prod-shot img{ width:100%; height:300px; object-fit:cover; object-position:top; display:block; filter:grayscale(.35) contrast(1.03); transition:filter .35s, transform .5s; }
+.prod-card:hover .prod-shot img{ filter:grayscale(0); transform:scale(1.02); }
+.prod-status{
+  position:absolute; top:12px; left:12px;
+  background:color-mix(in srgb, var(--bg) 80%, transparent); backdrop-filter:blur(6px);
+  border:1px solid var(--line-hard); border-radius:100px; padding:6px 11px 6px 9px; color:var(--fg-soft);
+}
+.prod-body{ padding:22px; display:flex; flex-direction:column; flex:1; }
+.prod-body .ref{ margin-bottom:10px; }
+.prod-body h3{ font-size:clamp(1.1rem,1.9vw,1.4rem); margin-bottom:10px; }
+.prod-body p{ color:var(--fg-soft); font-size:.92rem; }
+.prod-body .sheet-cta{ margin-top:18px; }
+
 .art-rows{ display:flex; flex-direction:column; justify-content:center; gap:9px; padding:18px; }
 .art-rows .row{
   display:flex; justify-content:space-between; align-items:center; gap:10px;
@@ -561,6 +583,7 @@ a{ color:inherit; }
   .menu-mob:not([hidden]){ display:flex; }
   .sheets{ grid-template-columns:1fr; }
   .port-grid{ grid-template-columns:1fr; }
+  .prod-grid{ grid-template-columns:1fr; }
   .ops{ grid-template-columns:1fr; }
   .picks{ grid-template-columns:1fr; }
   .facts{ grid-template-columns:1fr; }
@@ -587,6 +610,8 @@ a{ color:inherit; }
 
 @media (hover:none){
   .sheet:hover{ transform:none; box-shadow:none; border-color:var(--edge); }
+  .prod-card:hover{ transform:none; box-shadow:none; border-color:var(--edge); }
+  .prod-card:hover .prod-shot img{ filter:grayscale(.35); transform:none; }
   .pick:hover{ background:var(--surface); border-color:var(--edge); color:inherit; transform:none; }
   .pick:hover p,.pick:hover .ref{ color:var(--fg-soft); }
   .pick:hover .ref{ color:var(--signal); }
